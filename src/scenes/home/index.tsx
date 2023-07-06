@@ -1,10 +1,18 @@
 import React from "react";
 import LandingSection from "../../components/LandingSection";
+import CaseStudies from "../../components/CaseStudies";
+import { SelectedPage } from "../../shared/types";
+type Props = {
+  setSelectedPage: (value: SelectedPage) => void;
+};
 
-type Props = {};
-
-const Home = (props: Props) => {
-  return <LandingSection />;
+const Home = ({ setSelectedPage }: Props) => {
+  return (
+    <div>
+      <LandingSection setSelectedPage={setSelectedPage} />
+      <CaseStudies setSelectedPage={setSelectedPage} />
+    </div>
+  );
 };
 
 export default Home;

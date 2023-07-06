@@ -2,15 +2,18 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./scenes/Navbar";
 import { useState } from "react";
 import Home from "./scenes/home";
+import { SelectedPage } from "./shared/types";
 
 function App() {
-  const [selectedPage, setSelectedPage] = useState<string>("home");
+  const [selectedPage, setSelectedPage] = useState<SelectedPage>(
+    SelectedPage.Home
+  );
   const isTopOfPage = true;
   return (
     <Router>
-      <Navbar />
+      <Navbar selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home setSelectedPage={setSelectedPage} />} />
       </Routes>
     </Router>
   );
