@@ -13,17 +13,7 @@ const LandingSection = ({ setSelectedPage }: Props) => {
   return (
     <section className="mx-20 mt-20 flex items-center justify-between">
       {/* Left Heading and Text */}
-      <motion.div
-        className=" w-2/5  "
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.5 }}
-        transition={{ duration: 0.5 }}
-        variants={{
-          hidden: { opacity: 0, x: -50 },
-          visible: { opacity: 1, x: 0 },
-        }}
-      >
+      <div className=" w-2/5  ">
         <h1 className="font-worksans text-4xl font-extrabold">
           Hi, I am Minhal Aftab, an emerging Product Designer. I have worked as
           a UX designer and love creating functional and user-centric designs.
@@ -40,34 +30,14 @@ const LandingSection = ({ setSelectedPage }: Props) => {
 
           <p className="ml-8 text-secondary-100">Download Resume</p>
         </div>
-      </motion.div>
-      <motion.div
-        className=" absolute -bottom-2 -left-2 "
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.5 }}
-        transition={{ duration: 0.5 }}
-        variants={{
-          hidden: { opacity: 0, x: -50 },
-          visible: { opacity: 1, x: 0 },
-        }}
-      >
+      </div>
+      <div className=" absolute -bottom-2 -left-2 ">
         <img src={Checkimage} alt="check-design-image.png" />
-      </motion.div>
+      </div>
       {/* Door image */}
-      <motion.div
-        className="mr-16 h-full"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.5 }}
-        transition={{ delay: 0.2, duration: 0.5 }}
-        variants={{
-          hidden: { opacity: 0, x: -50 },
-          visible: { opacity: 1, x: 0 },
-        }}
-      >
+      <div className="mr-16 h-full">
         <img src={Doorimage} alt="yellow-door-image.png" />
-      </motion.div>
+      </div>
     </section>
   );
 };

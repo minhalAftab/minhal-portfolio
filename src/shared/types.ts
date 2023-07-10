@@ -4,3 +4,9 @@ export enum SelectedPage {
     Extras = "extras",
   }
   
+
+  export interface CaseType{
+    id: string;
+    image : string;
+    title: string;
+  }

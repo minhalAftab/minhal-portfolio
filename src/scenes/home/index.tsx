@@ -1,6 +1,6 @@
 import React from "react";
 import LandingSection from "../../components/LandingSection";
-import CaseStudies from "../../components/CaseStudies";
+import CaseStudies from "./casestudies/CaseStudies";
 import { SelectedPage } from "../../shared/types";
 type Props = {
   setSelectedPage: (value: SelectedPage) => void;

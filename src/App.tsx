@@ -3,6 +3,7 @@ import Navbar from "./scenes/Navbar";
 import { useState } from "react";
 import Home from "./scenes/home";
 import { SelectedPage } from "./shared/types";
+import ProjectContainer from "./scenes/projects/ProjectContainer";
 
 function App() {
   const [selectedPage, setSelectedPage] = useState<SelectedPage>(
@@ -14,6 +15,7 @@ function App() {
       <Navbar selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
       <Routes>
         <Route path="/" element={<Home setSelectedPage={setSelectedPage} />} />
+        <Route path="/projects/:projectId" element={<ProjectContainer />} />
       </Routes>
     </Router>
   );
